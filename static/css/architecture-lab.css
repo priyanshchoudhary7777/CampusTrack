@@ -1,0 +1,353 @@
+.arch-lab {
+  display: grid;
+  gap: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.arch-intro,
+.arch-panel,
+.arch-info-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+}
+
+.arch-intro,
+.arch-panel {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.arch-intro h2,
+.arch-panel h2 {
+  margin: 0.65rem 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.arch-intro p,
+.arch-note,
+.arch-info-card p {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.arch-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.15rem 0 0.35rem;
+}
+
+.arch-tab,
+.arch-button {
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  color: var(--text-main);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.58rem 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.arch-tab.active,
+.arch-button:not(.secondary) {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.arch-button.secondary {
+  background: var(--surface-alt);
+  color: var(--text-main);
+}
+
+.arch-button:hover,
+.arch-tab:hover {
+  filter: brightness(0.96);
+}
+
+.arch-note {
+  margin: 0.35rem 0 1rem;
+  line-height: 1.6;
+}
+
+.arch-controls,
+.arch-legend,
+.arch-blocks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.85rem 0;
+}
+
+.arch-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.arch-controls input[type="range"] {
+  accent-color: var(--primary);
+}
+
+.arch-controls input[type="number"],
+.arch-controls select {
+  width: auto;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-xs);
+  background: var(--surface-alt);
+  padding: 0.45rem;
+}
+
+.arch-legend {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.arch-legend span {
+  white-space: nowrap;
+}
+
+.arch-legend i {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+  vertical-align: -1px;
+}
+
+.arch-legend .arch-legend-wait {
+  background: #e3b8bf;
+}
+
+.arch-scroll,
+.arch-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+}
+
+.arch-grid {
+  display: grid;
+  gap: 2px;
+  min-width: max-content;
+  padding: 0.5rem;
+  font: 0.68rem var(--font-mono);
+}
+
+.arch-cell {
+  min-height: 1.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.arch-head {
+  color: var(--text-muted);
+}
+
+.arch-row-label {
+  justify-content: flex-start;
+  color: var(--text-main);
+}
+
+.arch-stage {
+  color: white;
+  font-weight: 800;
+}
+
+.arch-stall {
+  background: #e3b8bf;
+  color: #49363a;
+  font-size: 0.58rem;
+}
+
+.arch-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.arch-stats > div,
+.arch-registers > div {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+}
+
+.arch-stats b,
+.arch-registers b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.arch-stats span,
+.arch-registers span {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.arch-registers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.55rem;
+  margin: 1rem 0;
+}
+
+.arch-registers b {
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+}
+
+.arch-trace {
+  overflow-x: auto;
+  padding: 0.9rem;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  color: var(--text-main);
+  font: 0.75rem/1.7 var(--font-mono);
+  white-space: pre-wrap;
+}
+
+.arch-subhead {
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.arch-info-card {
+  padding: 1rem;
+  box-shadow: none;
+}
+
+.arch-info-card h3 {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.arch-info-card p + p {
+  margin-top: 0.55rem;
+}
+
+.arch-two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.arch-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.arch-table th,
+.arch-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--surface-border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.arch-table th {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.arch-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.arch-bars {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1rem 0;
+}
+
+.arch-bars > div {
+  display: grid;
+  gap: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.arch-bars i {
+  display: block;
+  min-width: 6rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  background: var(--primary);
+  color: white;
+  font: normal 0.7rem var(--font-mono);
+  white-space: nowrap;
+}
+
+.arch-workers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+
+.arch-worker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.2rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.arch-worker i {
+  height: 0.5rem;
+  border-radius: 99px;
+  background: var(--accent-cyan);
+}
+
+.arch-worker-card {
+  padding: 0.75rem;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+}
+
+.arch-worker-card h3 {
+  font-size: 0.85rem;
+}
+
+.arch-worker-card p {
+  margin: 0.35rem 0 0.65rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.arch-worker-card .arch-button {
+  margin: 0 0.25rem 0.2rem 0;
+}
+
+@media (max-width: 600px) {
+  .arch-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .arch-intro,
+  .arch-panel {
+    border-radius: var(--radius-md);
+  }
+}
